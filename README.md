@@ -1,35 +1,37 @@
-# Crawler_mfw
+# Crawler_mfw                                    
 a selenium and bs4 based python crawler
 
 ---------------------------------------------
-·şÎñÆ÷seleniumÅÀ³æ
 
-1. ¹¤¾ß£º²âÊÔ¹¤¾ßseleniumÄ£ÄâÍøÒ³Êµ¼Êµã»÷²Ù×÷ (+BeautifulSoupÓÃÓÚÍøÒ³½âÎö) 
-2. »·¾³£ºcentos
 
-¿ÉÄÜÓöµ½µÄÎÊÌâ£º
+æœåŠ¡å™¨seleniumçˆ¬è™«
+
+1. å·¥å…·ï¼šæµ‹è¯•å·¥å…·seleniumæ¨¡æ‹Ÿç½‘é¡µå®é™…ç‚¹å‡»æ“ä½œ (+BeautifulSoupç”¨äºç½‘é¡µè§£æ) 
+2. ç¯å¢ƒï¼šcentos
+
+å¯èƒ½é‡åˆ°çš„é—®é¢˜ï¼š
 1. selenium.common.exceptions.WebDriverException: Message: connection refused
 -------
-È¥¿´geckodriver.log 
+å»çœ‹geckodriver.log 
 
 
 2. selenium.common.exceptions.WebDriverException: Message: Failed to start browser: entity not found
 -------
-°Ñbinary = FirefoxBinary(Ïà¶ÔÂ·¾¶)¸Ä³Ébinary = FirefoxBinary(¾ø¶ÔÂ·¾¶)²¢±£Ö¤Â·¾¶ÕıÈ·
+æŠŠbinary = FirefoxBinary(ç›¸å¯¹è·¯å¾„)æ”¹æˆbinary = FirefoxBinary(ç»å¯¹è·¯å¾„)å¹¶ä¿è¯è·¯å¾„æ­£ç¡®
 
 
-3. Python Selenium Webdriver Failed to star browser: Permission denied »òÕß selenium.common.exceptions.WebDriverException: Message: Failed to start browser: entity not found
+3. Python Selenium Webdriver Failed to star browser: Permission denied æˆ–è€… selenium.common.exceptions.WebDriverException: Message: Failed to start browser: entity not found
 -------
-Ö¸¶¨firefoxÄ¿Â¼£¬ÈçÏÂËùÊ¾£º
+æŒ‡å®šfirefoxç›®å½•ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼š
 
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
-binary = FirefoxBinary('firefox¶ş½øÖÆ¿ÉÖ´ĞĞÎÄ¼şµÄ¾ø¶ÔÂ·¾¶')
+binary = FirefoxBinary('firefoxäºŒè¿›åˆ¶å¯æ‰§è¡Œæ–‡ä»¶çš„ç»å¯¹è·¯å¾„')
 driver = webdriver.Firefox(firefox_binary=binary)
 
-driver.get('ÄãÒªÅÀµÄurl')
+driver.get('ä½ è¦çˆ¬çš„url')
 html = driver.page_source       
 
 from bs4 import BeautifulSoup
@@ -38,7 +40,7 @@ soup.find('p', attrs={'class':'classname'})
 
 elems = driver.find_elements_by_class_name("multiclass1.multiclass2")
 for elem in elems:
-		print elem.get_attribute('ÄãÒªµÄattribute')
+	print elem.get_attribute('ä½ è¦çš„attribute')
 
 
 
@@ -49,17 +51,17 @@ export DISPLAY=:0
 
 5. Error: cannot open display: :0
 -------
-Èç¹ûÄãÊÇÔÚÒ»¸öÃ»ÓĞGUIµÄ»·¾³ÏÂ²Ù×÷£¬ÄÇÃ´ÄãĞèÒªÒ»¸öheadless»·¾³£¬±ÈÈçxvfb£»»òÕßÕÒ¸öÓĞguiµÄ·şÎñÆ÷È»ºóÓÃssh + Xming·ÃÎÊ¡£¡£
-xvfb¹¥ÂÔ£ºhttp://www.alittlemadness.com/2008/03/05/running-selenium-headless/
-ÓĞguiµÄ»·¾³¹¥ÂÔ£ºhttp://blog.sina.com.cn/s/blog_60230cd90100j98e.html
+å¦‚æœä½ æ˜¯åœ¨ä¸€ä¸ªæ²¡æœ‰GUIçš„ç¯å¢ƒä¸‹æ“ä½œï¼Œé‚£ä¹ˆä½ éœ€è¦ä¸€ä¸ªheadlessç¯å¢ƒï¼Œæ¯”å¦‚xvfbï¼›æˆ–è€…æ‰¾ä¸ªæœ‰guiçš„æœåŠ¡å™¨ç„¶åç”¨ssh + Xmingè®¿é—®ã€‚ã€‚
+xvfbæ”»ç•¥ï¼šhttp://www.alittlemadness.com/2008/03/05/running-selenium-headless/
+æœ‰guiçš„ç¯å¢ƒæ”»ç•¥ï¼šhttp://blog.sina.com.cn/s/blog_60230cd90100j98e.html
 
 
 
 
 
 Docs:
-1. selenium¹Ù·½ÎÄµµ£ºhttp://selenium-python.readthedocs.io/installation.html µ«ËµÊµ»°²¢²»È«£¬»¹ÊÇjavaµÄ½Ó¿ÚÈ«Ò»Ğ©£¬ÓÃµÄÈËÒ²¶à
-2. seleniumÖĞrun javascript£ºhttp://stackoverflow.com/questions/5585343/getting-the-return-value-of-javascript-code-in-selenium/5585345#5585345
+1. seleniumå®˜æ–¹æ–‡æ¡£ï¼šhttp://selenium-python.readthedocs.io/installation.html ä½†è¯´å®è¯å¹¶ä¸å…¨ï¼Œè¿˜æ˜¯javaçš„æ¥å£å…¨ä¸€äº›ï¼Œç”¨çš„äººä¹Ÿå¤š
+2. seleniumä¸­run javascriptï¼šhttp://stackoverflow.com/questions/5585343/getting-the-return-value-of-javascript-code-in-selenium/5585345#5585345
 
 
 
