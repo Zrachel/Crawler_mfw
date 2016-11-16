@@ -14,6 +14,8 @@ a selenium and bs4 based python crawler
 1. selenium官方文档：http://selenium-python.readthedocs.io/installation.html 但说实话并不全，还是java的接口全一些，用的人也多
 
 2. selenium中run javascript：http://stackoverflow.com/questions/5585343/getting-the-return-value-of-javascript-code-in-selenium/5585345#5585345
+
+
 -------
 
 ## 可能遇到的问题：
