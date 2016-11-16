@@ -5,19 +5,19 @@ a selenium and bs4 based python crawler
 
 
 ## 服务器selenium爬虫
--------
+
 1. 工具：测试工具selenium模拟网页实际点击操作 (+BeautifulSoup用于网页解析) 
 
 2. 环境：centos
 
 ## Docs:
--------
 1. selenium官方文档：http://selenium-python.readthedocs.io/installation.html 但说实话并不全，还是java的接口全一些，用的人也多
 
 2. selenium中run javascript：http://stackoverflow.com/questions/5585343/getting-the-return-value-of-javascript-code-in-selenium/5585345#5585345
 -------
 
 ## 可能遇到的问题：
+
 1. selenium.common.exceptions.WebDriverException: Message: connection refused
 -------
 去看geckodriver.log 
