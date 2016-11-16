@@ -18,9 +18,7 @@ a selenium and bs4 based python crawler
 把binary = FirefoxBinary(相对路径)改成binary = FirefoxBinary(绝对路径)并保证路径正确
 
 
-3. Python Selenium Webdriver Failed to star browser: Permission denied
-或者
-selenium.common.exceptions.WebDriverException: Message: Failed to start browser: entity not found
+3. Python Selenium Webdriver Failed to star browser: Permission denied 或者 selenium.common.exceptions.WebDriverException: Message: Failed to start browser: entity not found
 -------
 指定firefox目录，如下所示：
 
